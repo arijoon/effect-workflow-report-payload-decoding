@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    /* Basic Options */
+    "target": "ES2022",
+    "module": "ESNext",
+    "lib": ["ES2022", "DOM"],
+    "moduleResolution": "bundler",
+    "types": [],
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+
+    /* Strictness */
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "forceConsistentCasingInFileNames": true,
+
+    /* Output */
+    "outDir": "./dist",
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+
+    /* Project Options */
+    "skipLibCheck": true,
+    "noEmitOnError": true,
+
+    /* For Libraries */
+    "composite": true,
+    "emitDeclarationOnly": false
+  },
+  "include": ["index.ts"],
+  "exclude": ["node_modules", "dist", "**/*.test.ts"]
+}

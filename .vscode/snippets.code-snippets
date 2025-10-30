@@ -1,0 +1,95 @@
+{
+  "Create Schema Class": {
+    "prefix": "schemaClass",
+    "body": [
+      "export class ${1:ClassName} extends Schema.Class<${1:ClassName}>('${1:ClassName}')({",
+      "  $0",
+      "}) {}",
+    ],
+    "description": "Generate a Schema.Class",
+  },
+  "Create Schema Tagged error": {
+    "prefix": "schemaError",
+    "body": [
+      "export class ${1:ClassName} extends Schema.TaggedError<${1:ClassName}>()('${1:ClassName}', {",
+      "  $0",
+      "}) {}",
+    ],
+    "description": "Generate a Schema.Class",
+  },
+  "Effect Generator": {
+    "prefix": "effectGen",
+    "body": ["Effect.gen(function* () {", "  $0", "})"],
+    "description": "Generate a Effect.gen",
+  },
+
+  "Effect Function": {
+    "prefix": "effectFn",
+    "body": ["Effect.fn('${1:name}')(function* () {", "  $0", "})"],
+    "description": "Generate a Effect.fn",
+  },
+
+  "Effect Context": {
+    "prefix": "effectCtx",
+    "body": [
+      "export class ${1:ClassName} extends Context.Tag('${1:ClassName}')<",
+      "${1:ClassName},",
+      "${0}",
+      ">() {}",
+    ],
+    "description": "Effect context",
+  },
+  "Effect service config": {
+    "prefix": "effectConfig",
+    "body": [
+      "export class ${1:Name} extends Context.Tag('${1:Name}')<",
+      "  ${1:Name},",
+      "  {",
+      "    ${0}",
+      "  }",
+      ">() {",
+      "  static layer = makeLayerFromConfig(this)",
+      "}"
+    ],
+    "description": "Create a GravityClientConfig-style class"
+  },
+  "Effect Tagged Error": {
+    "prefix": "taggedError",
+    "body": [
+      "export class ${1:ClassName} extends Schema.TaggedError<${1:ClassName}>()(",
+      "  '${1:ClassName}',",
+      "  {$0},",
+      ")",
+      "{}",
+    ],
+  },
+  "Effect service boilerplate": {
+    "prefix": "effectService",
+    "body": [
+      "export type ${1:ClassName}Service = {$0}",
+      "",
+      "export class ${1:ClassName} extends Context.Tag('${1:ClassName}')<",
+      "  ${1:ClassName},",
+      "  ${1:ClassName}Service",
+      ">() {}",
+    ],
+  },
+  "Effect Tagged Schema": {
+    "prefix": "taggedClass",
+    "body": [
+      "export class ${1:ClassName} extends Schema.TaggedClass<${1:ClassName}>()(",
+      "  '${1:ClassName}',",
+      "  {$0},",
+      ")",
+      "{}",
+    ],
+  },
+  "Effect Model Class": {
+    "prefix": "modelClass",
+    "body": [
+      "export class ${1:ClassName} extends Model.Class<${1:ClassName}>('${1:ClassName}')({",
+      "  $0",
+      "}) {}",
+    ],
+  }
+}

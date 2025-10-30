@@ -16,6 +16,7 @@
         packages.default = pkgs.hello;
         devShells.default = pkgs.mkShell {
           buildInputs = with pkgs; [
+            nodejs
             pnpm
             dprint
           ];
